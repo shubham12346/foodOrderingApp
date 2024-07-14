@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Header {
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(224, 169, 97);
+}
+
+.logo > img {
+  padding: 10px;
+  height: 5rem;
+  width: 5rem;
+}
+
+.nav-elements {
+  display: flex;
+  list-style: none;
+}
+.element {
+  font-size: 2rem;
+  padding: 10px;
+}
+.bodyWrapper {
+  padding: 10px;
+}
+.searchWrapper {
+  display: flex;
+}
+.inputSearch {
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+.inputButton {
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.restaurantContainer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.restaurantCard {
+  margin: 20px;
+  width: 230px;
+  height: 300px;
+  padding: 10px;
+  display: inline-block;
+}
+.cardImg {
+  display: inline-block;
+  width: 210px;
+  height: 170px;
+  border-radius: 10px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.restaurantCard:hover .cardImg {
+  width: 190px;
+  height: 150px;
+}
+
+.restaurantCardSkeleton {
+  width: 240px;
+  height: 350px;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  background-color: rgb(177, 186, 194);
+}
+.skeletonWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}

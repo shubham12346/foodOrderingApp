@@ -1,20 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./component/Header";
+import "./App.css";
+import Body from "./component/Body";
 
-const Header = () => {
-  return (
-    <div>
-      <div></div>
-    </div>
-  );
-};
 const AppLayout = () => {
   return (
     <div className="app">
-      {/* // Header 
-       // Body 
-       // Footer  */}
-      <h1>hello world</h1>
+      <Header />
+      <Body />
     </div>
   );
 };
