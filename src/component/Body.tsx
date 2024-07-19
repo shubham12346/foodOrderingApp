@@ -4,6 +4,7 @@ import RestaurantList from "./RestaurantList";
 import { getRestaurantData } from "../api/swiggyApi";
 import { restaurantData } from "./restaurant";
 import Skeleton from "./Skeleton";
+import Title from "./Title";
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -39,7 +40,7 @@ const Body = () => {
       setFilteredData(restaurantList);
     } else {
       const filteredList = restaurantList?.filter((restaurant) =>
-        restaurant?.name.toLowerCase().includes(searchText)
+        restaurant?.name.toLowerCase().includes(searchText.toLowerCase())
       );
       setDataAfterSearch(filteredList);
     }
@@ -49,16 +50,19 @@ const Body = () => {
     setLoader(true);
     setTimeout(() => {
       setFilteredData(filteredList);
-      console.log("filteredList", filteredList);
-
       setLoader(false);
     }, 2000);
   };
+  console.log("filteredData", filteredData);
   return (
     <div className="bodyWrapper">
       <Search handleSearchText={handleSearchText} />
-      {loader && <Skeleton />}
-      {filteredData && <RestaurantList restaurant={filteredData} />}
+      <Title title={"Restaurant List "} />
+      {loader ? (
+        <Skeleton />
+      ) : (
+        filteredData && <RestaurantList restaurant={filteredData} />
+      )}
     </div>
   );
 };
