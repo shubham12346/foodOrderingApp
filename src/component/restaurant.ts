@@ -15,7 +15,14 @@ export const restaurantData = [
     time: "60-65 mins",
     type: "Pizzas",
     location: "Punawale",
-    imageUrl: `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597`,
+    imageUrl:
+      "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597",
+    menu: {
+      starters: ["Garlic Bread", "Cheese Sticks"],
+      lunch: ["Pepperoni Pizza", "Margherita Pizza"],
+      dinner: ["BBQ Chicken Pizza", "Veggie Supreme Pizza"],
+      beverages: ["Coke", "Pepsi"],
+    },
   },
   {
     id: 2,
@@ -25,6 +32,12 @@ export const restaurantData = [
     type: "Burgers",
     location: "Wakad",
     imageUrl: img1,
+    menu: {
+      starters: ["Chicken Fries", "Mozzarella Sticks"],
+      lunch: ["Whopper", "Veggie Burger"],
+      dinner: ["Double Cheeseburger", "Chicken Sandwich"],
+      beverages: ["Sprite", "Fanta"],
+    },
   },
   {
     id: 3,
@@ -34,6 +47,12 @@ export const restaurantData = [
     type: "Sandwiches",
     location: "Hinjewadi",
     imageUrl: img2,
+    menu: {
+      starters: ["Salad Bowl", "Soup"],
+      lunch: ["Turkey Sub", "Veggie Delight"],
+      dinner: ["Chicken Teriyaki Sub", "Meatball Marinara"],
+      beverages: ["Iced Tea", "Lemonade"],
+    },
   },
   {
     id: 4,
@@ -43,6 +62,12 @@ export const restaurantData = [
     type: "Pizzas",
     location: "Baner",
     imageUrl: img3,
+    menu: {
+      starters: ["Stuffed Cheesy Bread", "Parmesan Bread Bites"],
+      lunch: ["Pepperoni Pizza", "Cheese Pizza"],
+      dinner: ["Deluxe Pizza", "Hawaiian Pizza"],
+      beverages: ["Coke", "Diet Coke"],
+    },
   },
   {
     id: 5,
@@ -52,6 +77,12 @@ export const restaurantData = [
     type: "Chicken",
     location: "Aundh",
     imageUrl: img4,
+    menu: {
+      starters: ["Chicken Popcorn", "Hot Wings"],
+      lunch: ["Zinger Burger", "Chicken Wrap"],
+      dinner: ["Fried Chicken Bucket", "Chicken Rice Bowl"],
+      beverages: ["Mountain Dew", "Mirinda"],
+    },
   },
   {
     id: 6,
@@ -61,6 +92,12 @@ export const restaurantData = [
     type: "Coffee",
     location: "Pimple Saudagar",
     imageUrl: img5,
+    menu: {
+      starters: ["Banana Bread", "Butter Croissant"],
+      lunch: ["Chicken Panini", "Veggie Sandwich"],
+      dinner: ["Turkey Club Sandwich", "Chicken Salad"],
+      beverages: ["Latte", "Cappuccino"],
+    },
   },
   {
     id: 7,
@@ -70,6 +107,12 @@ export const restaurantData = [
     type: "Burgers",
     location: "Chinchwad",
     imageUrl: img6,
+    menu: {
+      starters: ["Fries", "Apple Pie"],
+      lunch: ["Big Mac", "Filet-O-Fish"],
+      dinner: ["Chicken McNuggets", "McChicken"],
+      beverages: ["Coke", "Sprite"],
+    },
   },
   {
     id: 8,
@@ -79,8 +122,13 @@ export const restaurantData = [
     type: "Mexican",
     location: "Pimpri",
     imageUrl: img7,
+    menu: {
+      starters: ["Nachos", "Cheesy Roll"],
+      lunch: ["Crunchy Taco", "Bean Burrito"],
+      dinner: ["Quesadilla", "Mexican Pizza"],
+      beverages: ["Mountain Dew", "Pepsi"],
+    },
   },
-
   {
     id: 9,
     name: "Dunkin' Donuts",
@@ -89,6 +137,12 @@ export const restaurantData = [
     type: "Donuts",
     location: "Kothrud",
     imageUrl: img8,
+    menu: {
+      starters: ["Munchkins", "Hash Browns"],
+      lunch: ["Turkey Sausage Flatbread", "Veggie Egg White Sandwich"],
+      dinner: ["Grilled Cheese", "Chicken Salad Sandwich"],
+      beverages: ["Coffee", "Hot Chocolate"],
+    },
   },
   {
     id: 10,
@@ -98,6 +152,12 @@ export const restaurantData = [
     type: "Chinese",
     location: "Karve Nagar",
     imageUrl: img2,
+    menu: {
+      starters: ["Egg Rolls", "Crab Rangoon"],
+      lunch: ["Orange Chicken", "Beef and Broccoli"],
+      dinner: ["Kung Pao Chicken", "SweetFire Chicken Breast"],
+      beverages: ["Green Tea", "Soda"],
+    },
   },
   {
     id: 11,
@@ -107,6 +167,12 @@ export const restaurantData = [
     type: "Donuts",
     location: "Kothrud",
     imageUrl: img4,
+    menu: {
+      starters: ["Munchkins", "Hash Browns"],
+      lunch: ["Turkey Sausage Flatbread", "Veggie Egg White Sandwich"],
+      dinner: ["Grilled Cheese", "Chicken Salad Sandwich"],
+      beverages: ["Coffee", "Hot Chocolate"],
+    },
   },
   {
     id: 12,
@@ -116,5 +182,11 @@ export const restaurantData = [
     type: "Chinese",
     location: "Karve Nagar",
     imageUrl: img6,
+    menu: {
+      starters: ["Egg Rolls", "Crab Rangoon"],
+      lunch: ["Orange Chicken", "Beef and Broccoli"],
+      dinner: ["Kung Pao Chicken", "SweetFire Chicken Breast"],
+      beverages: ["Green Tea", "Soda"],
+    },
   },
 ];

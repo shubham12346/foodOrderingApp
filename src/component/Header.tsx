@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assest/logo1.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [login, setLogin] = useState(false);
@@ -10,9 +11,15 @@ const Header = () => {
       </div>
       <div className="nav-elementsWrapper">
         <ul className="nav-elements">
-          <li className="element">Home</li>
-          <li className="element">About</li>
-          <li className="element">Contact</li>
+          <Link to="/">
+            <li className="element">Home</li>
+          </Link>
+          <Link to="/about">
+            <li className="element">About </li>
+          </Link>
+          <Link to="/contact">
+            <li className="element">Contact </li>
+          </Link>
         </ul>
 
         <div

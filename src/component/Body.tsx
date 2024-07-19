@@ -3,7 +3,7 @@ import Search from "./Search";
 import RestaurantList from "./RestaurantList";
 import { getRestaurantData } from "../api/swiggyApi";
 import { restaurantData } from "./restaurant";
-import Skeleton from "./Skeleton";
+import Skeleton from "./skeleton/Skeleton";
 import Title from "./Title";
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -16,10 +16,10 @@ const Body = () => {
     fetchMockData();
   }, []);
 
-  const fetchRestaurantData = async () => {
-    const res = await getRestaurantData();
-    console.log("res", res?.data?.cards[0]);
-  };
+  // const fetchRestaurantData = async () => {
+  //   const res = await getRestaurantData();
+  //   console.log("res", res?.data?.cards[0]);
+  // };
 
   const fetchMockData = () => {
     setLoader(true);
