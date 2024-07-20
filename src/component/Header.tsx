@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Logo from "../assest/logo1.jpg";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
 
 const Header = () => {
   const [login, setLogin] = useState(false);
+  const { state } = useContext(AuthContext);
   return (
     <nav className="Header">
       <div className="logo">
@@ -28,7 +30,7 @@ const Header = () => {
           }}
           className="loginButton"
         >
-          {login ? <h2>Logout</h2> : <h2>Login</h2>}
+          {state?.isLoggedIn ? <h2>Logout</h2> : <h2>Login</h2>}
         </div>
       </div>
     </nav>

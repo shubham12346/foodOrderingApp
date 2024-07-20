@@ -25,7 +25,7 @@ const Body = () => {
     setLoader(true);
     setTimeout(() => {
       setTheState();
-    }, 3000);
+    }, 2000);
   };
 
   const setTheState = () => {

@@ -8,6 +8,9 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import RestaurantDetail from "./component/RestaurantDetail";
 import Error from "./component/Error";
+import LoginForm from "./component/login/LoginForm";
+import { AuthProvider } from "./context/authContext";
+import GuardedRoutes from "./component/gueardeRoutes/GuardedRoutes";
 
 const AppLayout = () => {
   return (
@@ -20,32 +23,41 @@ const AppLayout = () => {
 
 const appRouter = createBrowserRouter([
   {
+    path: "/login",
+    element: <LoginForm />,
+    errorElement: <Error />,
+  },
+  {
     path: "/",
-    element: <AppLayout />,
+    element: <GuardedRoutes children={<AppLayout />} />,
     errorElement: <Error />,
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <GuardedRoutes children={<Body />} />,
         errorElement: <Error />,
       },
       {
         path: "/about",
-        element: <About />,
+        element: <GuardedRoutes children={<About />} />,
         errorElement: <Error />,
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <GuardedRoutes children={<Contact />} />,
         errorElement: <Error />,
       },
       {
         path: "/:restId",
-        element: <RestaurantDetail />,
+        element: <GuardedRoutes children={<RestaurantDetail />} />,
       },
     ],
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+  <AuthProvider>
+    <RouterProvider router={appRouter} />
+  </AuthProvider>
+);
