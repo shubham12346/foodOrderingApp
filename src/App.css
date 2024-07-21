@@ -5,11 +5,14 @@
 }
 
 .Header {
-  border: 2px solid black;
+  margin-top: 0;
+  border-bottom: 2px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(224, 169, 97);
+  position: fixed;
+  width: 100%;
 }
 .logo {
   display: flex;
@@ -96,4 +99,52 @@
 .skeletonWrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+/* About Page  */
+.about-page {
+  padding: 10px;
+}
+.about-wrapper {
+  padding: 10px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin: 10px;
+  background-color: rgb(224, 169, 97);
+  width: 40%;
+  border: 2px solid black;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.description-description {
+  padding: 5px;
+  width: 100%;
+}
+.aboutSkeleton {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.aboutDescription {
+  margin: 10px;
+  height: 100px;
+  width: 700px;
+  background: #ddd;
+  animation: pulse 1.5s 2;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ddd;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #ddd;
+  }
 }

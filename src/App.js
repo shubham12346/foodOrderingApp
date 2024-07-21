@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./component/Header";
-import "./App.css";
-import Body from "./component/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import About from "./component/About";
+import "./App.css";
+import Header from "./component/Header";
+import Body from "./component/Body";
 import Contact from "./component/Contact";
+import About from "./component/about/About";
 import RestaurantDetail from "./component/RestaurantDetail";
 import Error from "./component/Error";
 import LoginForm from "./component/login/LoginForm";

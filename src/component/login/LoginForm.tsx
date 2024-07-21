@@ -50,6 +50,7 @@ const LoginForm = () => {
                 value={formik.values.username}
                 onChange={formik.handleChange}
                 required
+                autoComplete="off"
               />
             </div>
             <div className="userInput">
