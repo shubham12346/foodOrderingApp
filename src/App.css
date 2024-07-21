@@ -11,7 +11,10 @@
   align-items: center;
   background-color: rgb(224, 169, 97);
 }
-
+.logo {
+  display: flex;
+  align-items: center;
+}
 .logo > img {
   padding: 10px;
   height: 5rem;

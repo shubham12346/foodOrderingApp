@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react";
 
 const initialState = {
+  username: "",
   isLoggedIn: false,
   roles: null,
   actions: [],
@@ -11,11 +12,12 @@ export const AuthContext = createContext(initialState);
 
 export const AuthProvider = (props) => {
   const [state, setState] = useState(initialState);
-  const setLogin = () => {
-    setState((prev) => ({ ...prev, isLoggedIn: true }));
+  const setLogin = (username) => {
+    setState((prev) => ({ ...prev, isLoggedIn: true, username: username }));
   };
   const setLogout = () => {
     setState((prev) => ({ ...prev, isLoggedIn: false }));
+    window.location.href = "/login";
   };
 
   return (

@@ -5,11 +5,12 @@ import { AuthContext } from "../context/authContext";
 
 const Header = () => {
   const [login, setLogin] = useState(false);
-  const { state } = useContext(AuthContext);
+  const { state, setLogout } = useContext(AuthContext);
   return (
     <nav className="Header">
       <div className="logo">
         <img src={Logo} alt="" className="" />
+        {state?.isLoggedIn && <h2>{state?.username || ""}</h2>}
       </div>
       <div className="nav-elementsWrapper">
         <ul className="nav-elements">
@@ -26,7 +27,7 @@ const Header = () => {
 
         <div
           onClick={() => {
-            setLogin((prev) => !prev);
+            setLogout();
           }}
           className="loginButton"
         >
