@@ -19,7 +19,7 @@ export const AuthProvider = (props) => {
     setState((prev) => ({ ...prev, isLoggedIn: false }));
     window.location.href = "/login";
   };
-
+  console.log("useState", useState);
   return (
     <AuthContext.Provider value={{ state, setLogin, setLogout }}>
       {props.children}
