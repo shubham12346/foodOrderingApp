@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Search from "./Search";
 import RestaurantList from "./RestaurantList";
-import { getRestaurantData } from "../api/swiggyApi";
 import { restaurantData } from "./restaurant";
 import Skeleton from "./skeleton/Skeleton";
 import Title from "./Title";
+import useOnlineStatus from "./hooks/useOnlineStatus";
+import OfflineComponent from "./offline/OfflineComponent";
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [loader, setLoader] = useState<boolean>(false);
+
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     // fetchRestaurantData();
@@ -53,17 +56,26 @@ const Body = () => {
       setLoader(false);
     }, 2000);
   };
-  console.log("filteredData", filteredData);
+  console.log("onlineStatus", onlineStatus);
+
   return (
-    <div className="bodyWrapper">
-      <Search handleSearchText={handleSearchText} />
-      <Title title={"Restaurant List "} />
-      {loader ? (
-        <Skeleton />
+    <>
+      {onlineStatus ? (
+        <div className="bodyWrapper">
+          <Search handleSearchText={handleSearchText} />
+          <Title title={"Restaurant List "} />
+          {loader ? (
+            <Skeleton />
+          ) : (
+            filteredData && <RestaurantList restaurant={filteredData} />
+          )}
+        </div>
       ) : (
-        filteredData && <RestaurantList restaurant={filteredData} />
+        <div className="bodyWrapper">
+          <OfflineComponent />
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

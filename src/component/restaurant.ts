@@ -15,6 +15,7 @@ export const restaurantData = [
     time: "60-65 mins",
     type: "Pizzas",
     location: "Punawale",
+    promoted: true,
     imageUrl:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597",
     menu: {
@@ -30,6 +31,7 @@ export const restaurantData = [
     rating: 4.1,
     time: "50-55 mins",
     type: "Burgers",
+    promoted: false,
     location: "Wakad",
     imageUrl: img1,
     menu: {
@@ -46,6 +48,7 @@ export const restaurantData = [
     time: "45-50 mins",
     type: "Sandwiches",
     location: "Hinjewadi",
+    promoted: true,
     imageUrl: img2,
     menu: {
       starters: ["Salad Bowl", "Soup"],
@@ -61,6 +64,7 @@ export const restaurantData = [
     time: "55-60 mins",
     type: "Pizzas",
     location: "Baner",
+    promoted: false,
     imageUrl: img3,
     menu: {
       starters: ["Stuffed Cheesy Bread", "Parmesan Bread Bites"],
@@ -76,6 +80,8 @@ export const restaurantData = [
     time: "40-45 mins",
     type: "Chicken",
     location: "Aundh",
+    promoted: true,
+
     imageUrl: img4,
     menu: {
       starters: ["Chicken Popcorn", "Hot Wings"],
@@ -90,6 +96,7 @@ export const restaurantData = [
     rating: 4.5,
     time: "20-25 mins",
     type: "Coffee",
+    promoted: false,
     location: "Pimple Saudagar",
     imageUrl: img5,
     menu: {
@@ -106,6 +113,8 @@ export const restaurantData = [
     time: "30-35 mins",
     type: "Burgers",
     location: "Chinchwad",
+    promoted: true,
+
     imageUrl: img6,
     menu: {
       starters: ["Fries", "Apple Pie"],
@@ -120,6 +129,7 @@ export const restaurantData = [
     rating: 4.0,
     time: "45-50 mins",
     type: "Mexican",
+    promoted: false,
     location: "Pimpri",
     imageUrl: img7,
     menu: {
@@ -135,6 +145,7 @@ export const restaurantData = [
     rating: 4.3,
     time: "25-30 mins",
     type: "Donuts",
+    promoted: false,
     location: "Kothrud",
     imageUrl: img8,
     menu: {
@@ -151,6 +162,7 @@ export const restaurantData = [
     time: "35-40 mins",
     type: "Chinese",
     location: "Karve Nagar",
+    promoted: true,
     imageUrl: img2,
     menu: {
       starters: ["Egg Rolls", "Crab Rangoon"],
@@ -165,6 +177,7 @@ export const restaurantData = [
     rating: 4.3,
     time: "25-30 mins",
     type: "Donuts",
+    promoted: false,
     location: "Kothrud",
     imageUrl: img4,
     menu: {
@@ -179,6 +192,7 @@ export const restaurantData = [
     name: "Panda Express",
     rating: 4.4,
     time: "35-40 mins",
+    promoted: true,
     type: "Chinese",
     location: "Karve Nagar",
     imageUrl: img6,

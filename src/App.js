@@ -1,10 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./App.css";
 import Header from "./component/Header";
 import Body from "./component/Body";
-import Contact from "./component/Contact";
 import About from "./component/about/About";
 import RestaurantDetail from "./component/RestaurantDetail";
 import Error from "./component/Error";
@@ -20,6 +19,12 @@ const AppLayout = () => {
     </div>
   );
 };
+const Loader = () => {
+  return <div style={{ margin: "100px" }}>Loader....</div>;
+};
+
+export default Loader;
+const ContactFile = lazy(() => import("./component/Contact"));
 
 const appRouter = createBrowserRouter([
   {
@@ -29,27 +34,49 @@ const appRouter = createBrowserRouter([
   },
   {
     path: "/",
-    element: <GuardedRoutes children={<AppLayout />} />,
+    element: (
+      <GuardedRoutes>
+        <AppLayout />
+      </GuardedRoutes>
+    ),
     errorElement: <Error />,
     children: [
       {
         path: "/",
-        element: <GuardedRoutes children={<Body />} />,
+        element: (
+          <GuardedRoutes>
+            <Body />
+          </GuardedRoutes>
+        ),
         errorElement: <Error />,
       },
       {
         path: "/about",
-        element: <GuardedRoutes children={<About />} />,
-        errorElement: <Error />,
-      },
-      {
-        path: "/contact",
-        element: <GuardedRoutes children={<Contact />} />,
+        element: (
+          <GuardedRoutes>
+            <About />
+          </GuardedRoutes>
+        ),
         errorElement: <Error />,
       },
       {
         path: "/:restId",
-        element: <GuardedRoutes children={<RestaurantDetail />} />,
+        element: (
+          <GuardedRoutes>
+            <RestaurantDetail />
+          </GuardedRoutes>
+        ),
+      },
+      {
+        path: "/contact",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <GuardedRoutes>
+              <ContactFile />
+            </GuardedRoutes>
+          </Suspense>
+        ),
+        errorElement: <Error />,
       },
     ],
   },
