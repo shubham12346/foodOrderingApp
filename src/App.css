@@ -1,61 +1,7 @@
-.Header {
-  margin-top: 0;
-  border-bottom: 2px solid black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(224, 169, 97);
-  width: 100%;
-}
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo > img {
-  padding: 10px;
-  height: 5rem;
-  width: 5rem;
-}
-.nav-elementsWrapper {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.nav-elements {
-  margin-right: 20px;
-  display: flex;
-  list-style: none;
-}
-.nav-elements a {
-  text-decoration: none;
-  color: black;
-}
-.loginButton {
-  width: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.element {
-  font-size: 2rem;
-  padding: 10px;
-}
-.bodyWrapper {
-  padding: 10px;
-}
-.searchWrapper {
-  display: flex;
-}
-.inputSearch {
-  padding: 8px;
-  font-size: 1.2rem;
-}
-
-.inputButton {
-  padding: 10px;
-  margin-left: 10px;
-  font-size: 1rem;
-}
 .restaurantContainer {
   padding: 20px;
   display: flex;
@@ -100,7 +46,6 @@
 }
 .about-wrapper {
   padding: 10px;
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -118,7 +63,6 @@
   width: 100%;
 }
 .aboutSkeleton {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }

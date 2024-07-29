@@ -56,14 +56,13 @@ const Body = () => {
       setLoader(false);
     }, 2000);
   };
-  console.log("onlineStatus", onlineStatus);
 
   return (
     <>
       {onlineStatus ? (
-        <div className="bodyWrapper">
+        <div className="px-10 overflow-y-auto">
           <Search handleSearchText={handleSearchText} />
-          <Title title={"Restaurant List "} />
+          <Title title={"Restaurant List "} className={"px-2"} />
           {loader ? (
             <Skeleton />
           ) : (

@@ -5,7 +5,6 @@ import "./App.css";
 import Header from "./component/Header";
 import Body from "./component/Body";
 import About from "./component/about/About";
-import RestaurantDetail from "./component/RestaurantDetail";
 import Error from "./component/Error";
 import LoginForm from "./component/login/LoginForm";
 import { AuthProvider } from "./context/authContext";
@@ -25,6 +24,9 @@ const Loader = () => {
 
 export default Loader;
 const ContactFile = lazy(() => import("./component/Contact"));
+const RestaurantIndexModule = lazy(() =>
+  import("./component/restaurantDetail/RestaurantIndex")
+);
 
 const appRouter = createBrowserRouter([
   {
@@ -62,9 +64,11 @@ const appRouter = createBrowserRouter([
       {
         path: "/:restId",
         element: (
-          <GuardedRoutes>
-            <RestaurantDetail />
-          </GuardedRoutes>
+          <Suspense fallback={<Loader />}>
+            <GuardedRoutes>
+              <RestaurantIndexModule />
+            </GuardedRoutes>
+          </Suspense>
         ),
       },
       {

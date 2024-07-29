@@ -11,24 +11,29 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <nav className="Header">
-      <div className="logo">
-        <img src={Logo} alt="" className="" />
-        {state?.isLoggedIn && <h2>{state?.username || ""}</h2>}
+    <nav className="flex justify-between bg-orange-400">
+      <div className="flex justify-start items-center">
+        <img src={Logo} alt="" className="m-2 w-14 h-14" />
+        {state?.isLoggedIn && (
+          <h2 className="m-2 text-xl">{state?.username || ""}</h2>
+        )}
       </div>
-      <div className="nav-elementsWrapper">
-        <ul className="nav-elements">
-          <li className="element">
+      <div className="flex justify-evenly items-center mr-6">
+        <ul className="flex justify-evenly cursor-pointer">
+          <li className="p-2 text-xl">
             Online Status {onlineStatus ? "✅" : "🔴"}
           </li>
           <Link to="/">
-            <li className="element">Home</li>
+            <li className="p-2 text-xl">Home</li>
           </Link>
           <Link to="/about">
-            <li className="element">About </li>
+            <li className="p-2 text-xl">About </li>
           </Link>
           <Link to="/contact">
-            <li className="element">Contact </li>
+            <li className="p-2 text-xl">Contact </li>
+          </Link>
+          <Link to="/contact">
+            <li className="p-2 text-xl">Cart </li>
           </Link>
         </ul>
 
@@ -36,7 +41,7 @@ const Header = () => {
           onClick={() => {
             setLogout();
           }}
-          className="loginButton"
+          className=" text-xl cursor-pointer"
         >
           {state?.isLoggedIn ? <h2>Logout</h2> : <h2>Login</h2>}
         </div>

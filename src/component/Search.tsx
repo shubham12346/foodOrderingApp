@@ -7,17 +7,18 @@ const Search = ({ handleSearchText }) => {
   };
 
   return (
-    <div className="searchWrapper">
+    <div className="flex  justify-start pt-3 ">
       <input
         type="text"
         name="search"
         id=""
         onChange={handleOnChange}
         value={inputSearch}
-        className="inputSearch"
+        className="p-1 m-2 inputSearch border-2 border-black"
+        autoFocus={true}
       />
       <button
-        className="inputButton"
+        className="p-1 m-2 bg-green-400 rounded"
         onClick={() => {
           handleSearchText(inputSearch);
         }}

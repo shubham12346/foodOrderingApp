@@ -33,8 +33,11 @@ const Restaurants = (props) => {
 export const withPromotedLevel = (RestaurantCard) => {
   return (props) => {
     return (
-      <div className="restaurantCardWithPromotedLabel">
-        <label className="promotedLabel"> Promoted</label>
+      <div className="restaurantCardWithPromotedLabel relative">
+        <div className="absolute top-14 left-5 bg-orange-500 rounded p-1">
+          <label className=" text-sm text-white ">Promoted</label>
+        </div>
+
         <RestaurantCard {...props} />
       </div>
     );

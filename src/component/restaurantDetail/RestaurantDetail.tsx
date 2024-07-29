@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { restaurantData } from "./restaurant";
+import { restaurantData } from "../restaurant";
 
 const RestaurantDetail = () => {
   const { restId } = useParams();
