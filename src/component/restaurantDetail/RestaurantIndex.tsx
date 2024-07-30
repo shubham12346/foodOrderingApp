@@ -46,7 +46,7 @@ const RestaurantIndex = () => {
   };
 
   return (
-    <div className="border-2 border-black">
+    <div>
       <div className="mx-40  lg:mx-80   my-5">
         {restaurantDetail[0] && (
           <div className="lg:mx-32">
