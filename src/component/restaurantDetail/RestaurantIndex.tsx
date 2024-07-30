@@ -44,13 +44,21 @@ const RestaurantIndex = () => {
 
   return (
     <div className="border-2 border-black">
-      <div className="mx-40 my-5">
-        <RestaurantInfoCard restaurantDetail={restaurantDetail[0] || {}} />
-        <>
-        {restaurantMenu[0]} && (<AccordionComponent restaurantMenu={restaurantMenu[0]} />)}
+      <div className="mx-40  lg:mx-80   my-5">
+        {restaurantDetail[0] && (
+          <>
+            <div className="lg:mx-32">
+              <RestaurantInfoCard
+                restaurantDetail={restaurantDetail[0] || {}}
+              />
+            </div>
+            <AccordionComponent
+              restaurantMenu={Object.entries(restaurantMenu[0])}
+            />
+          </>
+        )}
 
-        </>
-        <RestaurantDetail />
+        {/* <RestaurantDetail /> */}
       </div>
     </div>
   );

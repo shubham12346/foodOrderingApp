@@ -70,6 +70,7 @@ const appRouter = createBrowserRouter([
             </GuardedRoutes>
           </Suspense>
         ),
+        errorElement: <Error />,
       },
       {
         path: "/contact",
