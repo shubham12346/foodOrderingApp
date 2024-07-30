@@ -11,7 +11,7 @@ const AccordianComponent = ({ restaurantMenu }) => {
           </h3>
           <div>⬇️</div>
         </div>
-        <div></div>
+        <div>{}</div>
       </div>
     </div>
   );
