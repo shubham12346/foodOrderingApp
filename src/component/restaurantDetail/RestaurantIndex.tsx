@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import RestaurantDetail from "./RestaurantDetail";
+import React, { Suspense, useEffect, useState } from "react";
 import RestaurantInfoCard from "./RestaurantInfoCard";
 import { useParams } from "react-router-dom";
 import { restaurantData, restaurantMenus } from "../restaurant.ts";
@@ -9,6 +8,7 @@ const RestaurantIndex = () => {
   const { restId } = useParams();
   const [restaurantDetail, setRestaurantDetail] = useState([]);
   const [restaurantMenu, setRestaurantMenu] = useState([]);
+  const [selectedMenu, setSelectedMenu] = useState("");
   const [loader, setLoader] = useState(false);
   let timer;
 
@@ -30,35 +30,36 @@ const RestaurantIndex = () => {
       );
       if (restaurantMenu) {
         setRestaurantDetail(restaurantMenu);
-        getRestaurantMenu(restaurantMenu[0]?.id);
+      }
+      const menus = restaurantMenus?.filter((item) => item?.id == restId);
+
+      if (menus) {
+        setRestaurantMenu(menus[0]);
+        setSelectedMenu("starters");
       }
       setLoader(false);
     }, 2000);
   };
 
-  const getRestaurantMenu = (id) => {
-    const menus = restaurantMenus?.filter((item) => item?.id === id);
-    setRestaurantMenu(menus);
+  const handleSelectedMenu = (menuName) => {
+    setSelectedMenu(menuName);
   };
-  console.log("restaurantMenu", restaurantMenu[0]);
 
   return (
     <div className="border-2 border-black">
       <div className="mx-40  lg:mx-80   my-5">
         {restaurantDetail[0] && (
-          <>
-            <div className="lg:mx-32">
-              <RestaurantInfoCard
-                restaurantDetail={restaurantDetail[0] || {}}
-              />
-            </div>
-            <AccordionComponent
-              restaurantMenu={Object.entries(restaurantMenu[0])}
-            />
-          </>
+          <div className="lg:mx-32">
+            <RestaurantInfoCard restaurantDetail={restaurantDetail[0] || {}} />
+          </div>
         )}
-
-        {/* <RestaurantDetail /> */}
+        {selectedMenu && (
+          <AccordionComponent
+            restaurantMenu={restaurantMenu}
+            selectedMenu={selectedMenu}
+            handleSelectedMenu={handleSelectedMenu}
+          />
+        )}
       </div>
     </div>
   );
