@@ -9,7 +9,8 @@ import Error from "./component/Error";
 import LoginForm from "./component/login/LoginForm";
 import { AuthProvider } from "./context/authContext";
 import GuardedRoutes from "./component/gueardeRoutes/GuardedRoutes";
-
+import { Provider } from "react-redux";
+import AppStore from "./store/appStore";
 const AppLayout = () => {
   return (
     <div className="app">
@@ -18,15 +19,16 @@ const AppLayout = () => {
     </div>
   );
 };
-const Loader = () => {
+export const Loader = () => {
   return <div style={{ margin: "100px" }}>Loader....</div>;
 };
 
-export default Loader;
 const ContactFile = lazy(() => import("./component/Contact"));
 const RestaurantIndexModule = lazy(() =>
   import("./component/restaurantDetail/RestaurantIndex")
 );
+
+const CartIndex = lazy(() => import("./component/cart/CartIndex"));
 
 const appRouter = createBrowserRouter([
   {
@@ -83,13 +85,26 @@ const appRouter = createBrowserRouter([
         ),
         errorElement: <Error />,
       },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <GuardedRoutes>
+              <CartIndex />
+            </GuardedRoutes>
+          </Suspense>
+        ),
+        errorElement: <Error />,
+      },
     ],
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider>
-    <RouterProvider router={appRouter} />
-  </AuthProvider>
+  <Provider store={AppStore}>
+    <AuthProvider>
+      <RouterProvider router={appRouter} />
+    </AuthProvider>
+  </Provider>
 );

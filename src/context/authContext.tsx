@@ -1,8 +1,8 @@
 import React, { useState, createContext } from "react";
 
 const initialState = {
-  username: "",
-  isLoggedIn: false,
+  username: localStorage.getItem("login") || "",
+  isLoggedIn: localStorage.getItem("login") ? true : false,
   roles: null,
   actions: [],
   loginError: false,

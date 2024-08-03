@@ -3,13 +3,15 @@ import Logo from "../assest/logo1.jpg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import useOnlineStatus from "./hooks/useOnlineStatus";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/appStore";
 
 const Header = () => {
+  const cart = useSelector((state: RootState) => state.cart);
   const [login, setLogin] = useState(false);
   const { state, setLogout } = useContext(AuthContext);
 
   const onlineStatus = useOnlineStatus();
-
   return (
     <nav className="flex justify-between bg-orange-400">
       <div className="flex justify-start items-center">
@@ -32,8 +34,8 @@ const Header = () => {
           <Link to="/contact">
             <li className="p-2 text-xl">Contact </li>
           </Link>
-          <Link to="/contact">
-            <li className="p-2 text-xl">Cart </li>
+          <Link to="/cart">
+            <li className="p-2 text-xl font-bold">Cart ({cart?.total}) </li>
           </Link>
         </ul>
 
