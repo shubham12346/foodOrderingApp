@@ -3,11 +3,35 @@ import { useNavigate } from "react-router-dom";
 
 const url = `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/`;
 const cloudId = "e0839ff574213e6f35b3899ebf1fc597";
-const Restaurants = (props) => {
+interface Menu {
+  starters: string[];
+  lunch: string[];
+  dinner: string[];
+  beverages: string[];
+}
+
+interface Restaurant {
+  id: number;
+  name: string;
+  rating: number;
+  time: string;
+  type: string;
+  location: string;
+  promoted: boolean;
+  imageUrl: string;
+  menu: Menu;
+}
+
+interface RestaurantsProps {
+  restaurant: Restaurant;
+}
+
+const Restaurants: React.FC<RestaurantsProps> = (props: any) => {
+  console.log("props", props);
   const { name, rating, time, type, location, imageUrl, id } = props.restaurant;
   const navigate = useNavigate();
 
-  const handleNavigate = (id) => {
+  const handleNavigate = (id: string) => {
     navigate(`/${id}`);
   };
 
@@ -30,8 +54,8 @@ const Restaurants = (props) => {
 // Higher Order Component
 //  input restaurantCard => re
 
-export const withPromotedLevel = (RestaurantCard) => {
-  return (props) => {
+export const withPromotedLevel = (RestaurantCard: any) => {
+  return (props: any) => {
     return (
       <div className="restaurantCardWithPromotedLabel relative">
         <div className="absolute top-14 left-5 bg-orange-500 rounded p-1">
