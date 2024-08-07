@@ -6,8 +6,9 @@
     "jsx": "react", // JSX support
     "strict": true, // Enable all strict type-checking options
     "skipLibCheck": true, // Skip type checking of declaration files
-    "forceConsistentCasingInFileNames": true // Ensure consistent casing in file names
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src/**/*", "tsconfig.json"], // Include all TypeScript files in src
-  "exclude": ["node_modules", "build"] // Exclude node_modules and build folders
+  "include": ["src/**/*", "tsconfig.json", "setupTests.js", "__mocks__"], // Include all TypeScript files in src
+  "exclude": ["node_modules", "build"] // Exclude node_modules and build folders,
 }

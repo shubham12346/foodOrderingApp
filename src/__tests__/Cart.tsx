@@ -1,6 +1,5 @@
 import { restaurantData } from "../component/restaurant";
 import React from "react";
-import { test, expect } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
 import Restaurants from "../component/Restaurants";
 import { BrowserRouter } from "react-router-dom";
@@ -30,6 +29,6 @@ test("Should render a restaurant  card ", async () => {
     </BrowserRouter>
   );
   const restaurantCard = screen.getByText("Pizza Hut");
-  expect(restaurantCard).toBeInTheDocaument(); // Ensure the restaurant card is rendered in the DOM); // Ensure the restaurant card is rendered in the DOM
+  expect(restaurantCard).toBeInTheDocument();
   console.log("restaurantCard");
 });
