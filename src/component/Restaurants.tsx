@@ -32,11 +32,15 @@ const Restaurants: React.FC<RestaurantsProps> = (props: any) => {
   const navigate = useNavigate();
 
   const handleNavigate = (id: string) => {
-    navigate(`/${id}`);
+    // navigate(`/${id}`);
   };
 
   return (
-    <div className="restaurantCard" onClick={() => handleNavigate(id)}>
+    <div
+      className="restaurantCard"
+      onClick={() => handleNavigate(id)}
+      data-testid="restaurantCard"
+    >
       <img src={imageUrl} alt="" className="cardImg" />
       <h2>{name}</h2>
       <h3>

@@ -7,8 +7,8 @@ import Title from "./Title";
 import useOnlineStatus from "./hooks/useOnlineStatus";
 import OfflineComponent from "./offline/OfflineComponent";
 const Body = () => {
-  const [restaurantList, setRestaurantList] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+  const [restaurantList, setRestaurantList] = useState<any>([]);
+  const [filteredData, setFilteredData] = useState<any>([]);
   const [loader, setLoader] = useState<boolean>(false);
 
   const onlineStatus = useOnlineStatus();
@@ -37,19 +37,19 @@ const Body = () => {
     setLoader(false);
   };
 
-  const handleSearchText = (searchText) => {
+  const handleSearchText = (searchText: string) => {
     console.log("searchText", searchText);
     if (searchText === "" && restaurantList?.length === 0) {
       setFilteredData(restaurantList);
     } else {
-      const filteredList = restaurantList?.filter((restaurant) =>
+      const filteredList = restaurantList?.filter((restaurant: any) =>
         restaurant?.name.toLowerCase().includes(searchText.toLowerCase())
       );
       setDataAfterSearch(filteredList);
     }
   };
 
-  const setDataAfterSearch = (filteredList) => {
+  const setDataAfterSearch = (filteredList: any) => {
     setLoader(true);
     setTimeout(() => {
       setFilteredData(filteredList);
@@ -66,7 +66,12 @@ const Body = () => {
           {loader ? (
             <Skeleton />
           ) : (
-            filteredData && <RestaurantList restaurant={filteredData} />
+            filteredData && (
+              <RestaurantList
+                restaurant={filteredData}
+                data-testid="restaurantContainer"
+              />
+            )
           )}
         </div>
       ) : (

@@ -1,25 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1723007541160" clover="3.2.0">
-  <project timestamp="1723007541160" name="All files">
-    <metrics statements="16" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1" elements="21" coveredelements="13" complexity="0" loc="16" ncloc="16" packages="1" files="1" classes="1"/>
-    <file name="Restaurants.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\Restaurants.tsx">
-      <metrics statements="16" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="30" count="1" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="32" count="1" type="stmt"/>
-      <line num="34" count="1" type="stmt"/>
-      <line num="35" count="0" type="stmt"/>
-      <line num="38" count="1" type="stmt"/>
-      <line num="39" count="0" type="stmt"/>
-      <line num="57" count="1" type="stmt"/>
-      <line num="58" count="0" type="stmt"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="71" count="1" type="stmt"/>
-    </file>
+<coverage generated="1723314670434" clover="3.2.0">
+  <project timestamp="1723314670434" name="All files">
+    <metrics statements="110" coveredstatements="103" conditionals="63" coveredconditionals="36" methods="32" coveredmethods="23" elements="205" coveredelements="162" complexity="0" loc="110" ncloc="110" packages="4" files="9" classes="9"/>
+    <package name="component">
+      <metrics statements="86" coveredstatements="83" conditionals="56" coveredconditionals="33" methods="23" coveredmethods="20"/>
+      <file name="Body.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\Body.tsx">
+        <metrics statements="37" coveredstatements="36" conditionals="22" coveredconditionals="13" methods="9" coveredmethods="9"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="34" count="7" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="40" count="7" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="cond" truecount="2" falsecount="6"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="46" count="12" type="cond" truecount="3" falsecount="1"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="52" count="7" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="60" count="7" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\Header.tsx">
+        <metrics statements="14" coveredstatements="13" conditionals="24" coveredconditionals="12" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+      </file>
+      <file name="RestaurantList.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\RestaurantList.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="11" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="Restaurants.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\Restaurants.tsx">
+        <metrics statements="15" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+        <line num="31" count="15" type="stmt"/>
+        <line num="32" count="15" type="stmt"/>
+        <line num="34" count="15" type="stmt"/>
+        <line num="38" count="15" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="4" type="stmt"/>
+        <line num="63" count="7" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+      </file>
+      <file name="Search.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\Search.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+      <file name="Title.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\Title.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="component.skeleton">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Skeleton.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\component\skeleton\Skeleton.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="context">
+      <metrics statements="16" coveredstatements="12" conditionals="7" coveredconditionals="3" methods="8" coveredmethods="2"/>
+      <file name="AuthContext.tsx" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\context\AuthContext.tsx">
+        <metrics statements="16" coveredstatements="12" conditionals="7" coveredconditionals="3" methods="8" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="store">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="appStore.ts" path="C:\Users\Shubham\OneDrive\Desktop\FoodOderingApp\src\store\appStore.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

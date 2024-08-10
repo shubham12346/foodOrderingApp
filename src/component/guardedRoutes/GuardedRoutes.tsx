@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
-const GuardedRoutes = ({ children }) => {
+const GuardedRoutes = ({ children }: any) => {
   const { state } = useContext(AuthContext);
   const redirectToLogin = () => {
     window.location.href = "/login";

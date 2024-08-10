@@ -1,13 +1,13 @@
 import React from "react";
 import Restaurants, { withPromotedLevel } from "./Restaurants";
 
-const RestaurantList = ({ restaurant }) => {
+const RestaurantList = ({ restaurant }: any) => {
   const RestaurantPromoted = withPromotedLevel(Restaurants);
-  console.log("restaurant", restaurant);
+  console.log("restauranttestttt", restaurant);
   return (
     <div>
       <div className="restaurantContainer">
-        {restaurant?.map((restaurantItem, index) =>
+        {restaurant?.map((restaurantItem: any, index: number) =>
           restaurantItem.promoted ? (
             <RestaurantPromoted key={index} restaurant={restaurantItem} />
           ) : (

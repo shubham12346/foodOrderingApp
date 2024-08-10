@@ -22,10 +22,11 @@ const initialState: AuthState = {
   actions: [],
   loginError: false,
 };
-
-export const AuthContext = createContext<AuthContextType | undefined>(
-  undefined
-);
+export const AuthContext = createContext<AuthContextType>({
+  state: initialState,
+  setLogin: () => {},
+  setLogout: () => {},
+});
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   children,

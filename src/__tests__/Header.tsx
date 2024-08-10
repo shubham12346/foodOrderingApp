@@ -4,19 +4,21 @@ import Header from "../component/Header";
 import { AuthProvider } from "../context/AuthContext";
 import { Provider } from "react-redux";
 import AppStore from "../store/appStore";
+import { BrowserRouter } from "react-router-dom";
 
 test("Should test header nav bar menu is rendered ", () => {
   render(
-    <Provider store={AppStore}>
-      <AuthProvider>
-        <Header />
-      </AuthProvider>
-    </Provider>
+    <BrowserRouter>
+      <Provider store={AppStore}>
+        <AuthProvider>
+          <Header />
+        </AuthProvider>
+      </Provider>
+    </BrowserRouter>
   );
 
   const link = screen.getByRole("link", {
     name: /about/i,
   });
-
-  console.log("link", link);
+  expect(link).toBeInTheDocument();
 });

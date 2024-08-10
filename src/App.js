@@ -8,7 +8,7 @@ import About from "./component/about/About";
 import Error from "./component/Error";
 import LoginForm from "./component/login/LoginForm";
 import { AuthProvider } from "./context/AuthContext";
-import GuardedRoutes from "./component/gueardeRoutes/GuardedRoutes";
+import GuardedRoutes from "./component/guardedRoutes/GuardedRoutes";
 import { Provider } from "react-redux";
 import AppStore from "./store/appStore";
 const AppLayout = () => {
