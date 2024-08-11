@@ -11,6 +11,7 @@ import { AuthProvider } from "./context/AuthContext";
 import GuardedRoutes from "./component/guardedRoutes/GuardedRoutes";
 import { Provider } from "react-redux";
 import AppStore from "./store/appStore";
+
 const AppLayout = () => {
   return (
     <div className="app">
@@ -97,6 +98,11 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <LoginForm />,
+    errorElement: <Error />,
   },
 ]);
 
