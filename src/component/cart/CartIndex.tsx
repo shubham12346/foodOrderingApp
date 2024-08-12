@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/appStore";
 import MenuITems from "../restaurantDetail/MenuITems";
-import logo from "../../assest/Logo1.jpg";
+import logo from "../../assest/logo1.jpg";
 import { clearCart } from "../../store/cartSlice.service";
 
 const CartIndex = () => {

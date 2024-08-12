@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assest/Logo1.jpg";
+import logo from "../../assest/logo1.jpg";
 import MenuITems from "./MenuITems";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice.service";
