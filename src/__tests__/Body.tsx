@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import AppStore from "../store/appStore";
-import { AuthProvider } from "../context/AuthContext";
+import { AuthProvider } from "../AuthContext";
 import Body from "../component/Body";
 
 describe("Body environment test ", () => {

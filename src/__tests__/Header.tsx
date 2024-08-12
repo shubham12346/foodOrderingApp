@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Header from "../component/Header";
-import { AuthProvider } from "../context/AuthContext";
+import { AuthProvider } from "../AuthContext";
 import { Provider } from "react-redux";
 import AppStore from "../store/appStore";
 import { BrowserRouter } from "react-router-dom";
