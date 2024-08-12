@@ -2,6 +2,7 @@
   "name": "foododeringapp",
   "version": "1.0.0",
   "description": "Food ordering App from Scratch ",
+  "homepage": "https://shubham12346.github.io/foodOrderingApp/",
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
