@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../AuthContext";
 import { useFormik } from "formik";
 
 const LoginForm = () => {
