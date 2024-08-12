@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "./hooks/useOnlineStatus";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/appStore";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../AuthContext";
 
 const Header = () => {
   const cart = useSelector((state: RootState) => state.cart);
