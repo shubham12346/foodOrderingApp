@@ -25,8 +25,8 @@ export const Loader = () => {
 };
 
 const ContactFile = lazy(() => import("./component/Contact"));
-const RestaurantIndexModule = lazy(() =>
-  import("./component/restaurantDetail/RestaurantIndex")
+const RestaurantIndexModule = lazy(
+  () => import("./component/restaurantDetail/RestaurantIndex")
 );
 
 const CartIndex = lazy(() => import("./component/cart/CartIndex"));

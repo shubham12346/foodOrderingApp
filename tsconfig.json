@@ -9,6 +9,12 @@
     "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
     "types": ["node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src/**/*", "tsconfig.json", "setupTests.js", "__mocks__"], // Include all TypeScript files in src
+  "include": [
+    "src/**/*",
+    "tsconfig.json",
+    "setupTests.js",
+    "__mocks__",
+    "vite.config.js"
+  ], // Include all TypeScript files in src
   "exclude": ["node_modules", "build"] // Exclude node_modules and build folders,
 }
