@@ -106,11 +106,26 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <Provider store={AppStore}>
-    <AuthProvider>
-      <RouterProvider router={appRouter} />
-    </AuthProvider>
-  </Provider>
-);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <Provider store={AppStore}>
+//     <AuthProvider>
+//       <RouterProvider router={appRouter} />
+//     </AuthProvider>
+//   </Provider>
+// );
+
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <Provider store={AppStore}>
+      <AuthProvider>
+        <RouterProvider router={appRouter} />
+      </AuthProvider>
+    </Provider>
+  );
+} else {
+  console.error("Root element not found");
+}
