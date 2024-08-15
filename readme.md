@@ -1,4 +1,4 @@
-- Project Live : https://shubham12346.github.io/foodOrderingApp/
+- Project Live : https://shubham12346.github.io/foodOrderingApp.github.io/
 
 # Components
 
